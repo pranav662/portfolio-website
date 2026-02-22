@@ -6,6 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load existing feedback from local storage immediately on load
     loadFeedback();
 
+    // -------------------------
+    // Scroll Animations & Active Nav Link (Intersection Observer)
+    // -------------------------
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Highlight corresponding nav link
+                let currentId = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
     feedbackForm.addEventListener('submit', (e) => {
         // Prevent default form submission causing page reload
         e.preventDefault();

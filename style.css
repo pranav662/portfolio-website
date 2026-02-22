@@ -21,6 +21,10 @@
     --success-color: #00cc66;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
@@ -143,31 +147,25 @@ main {
 .section {
     margin-bottom: 8rem;
     opacity: 0;
-    animation: fadeInUp 1s forwards cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1), transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.section:nth-child(2) {
-    animation-delay: 0.2s;
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.section:nth-child(3) {
-    animation-delay: 0.4s;
+.section:nth-child(2).visible {
+    transition-delay: 0.2s;
 }
 
-.section:nth-child(4) {
-    animation-delay: 0.6s;
+.section:nth-child(3).visible {
+    transition-delay: 0.4s;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section:nth-child(4).visible {
+    transition-delay: 0.6s;
 }
 
 .text-center {
