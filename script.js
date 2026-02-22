@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------
     // Scroll Animations & Active Nav Link (Intersection Observer)
     // -------------------------
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.section, footer');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     const observerOptions = {
