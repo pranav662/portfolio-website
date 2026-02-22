@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackForm.addEventListener('submit', (e) => {
         // Prevent default form submission causing page reload
         e.preventDefault();
-        
+
         // Reset previously displayed messages
         formMessage.className = 'hidden';
         formMessage.textContent = '';
@@ -56,18 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 month: 'short',
                 day: 'numeric',
                 hour: '2-digit',
-                minute:'2-digit'
+                minute: '2-digit'
             })
         };
 
         saveFeedback(newFeedback);
-        
+
         // Clear the form fields upon successful submission
         feedbackForm.reset();
 
         // Show successful DOM manipulation message
         showMessage('Feedback submitted successfully!', 'success');
-        
+
         // Immediately display on the web page the newly submitted item
         displayFeedback(newFeedback);
     });
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const feedbackElement = document.createElement('div');
         feedbackElement.className = 'feedback-item';
-        
+
         feedbackElement.innerHTML = `
             <div class="feedback-name">${escapeHTML(feedback.name)}</div>
             <div class="feedback-email"><a href="mailto:${escapeHTML(feedback.email)}" style="color: inherit; text-decoration: none;">${escapeHTML(feedback.email)}</a> &bull; ${feedback.date}</div>
