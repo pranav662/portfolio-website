@@ -2,8 +2,9 @@
 
 A sleek, modern, and fully responsive personal portfolio website built carefully from scratch showcasing my skills, projects, and contact information. 
 
-## 🚀 Live Demo
-You can view the live website here once GitHub Pages is enabled: **[Insert Your GitHub Pages Link Here]**
+## 🚀 Repository & Live Demo
+*   **GitHub Repository Link:** [https://github.com/pranav662/portfolio-website](https://github.com/pranav662/portfolio-website)
+*   **Live Website Link (Deployment):** [https://pranav662.github.io/portfolio-website/](https://pranav662.github.io/portfolio-website/)
 
 ## ✨ Features
 *   **Modern & Premium Design:** Features a dark-themed UI, custom gradient text, glowing micro-animations, and a completely responsive layout designed to look great on any device or screen size.
