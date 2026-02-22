@@ -7,6 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
     loadFeedback();
 
     // -------------------------
+    // Page Load Transition
+    // -------------------------
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.page-loader');
+
+        // Add a slight delay so the user can enjoy the splash screen
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            document.body.classList.remove('no-scroll');
+
+            // Optionally remove from DOM after transition completes to save memory
+            setTimeout(() => {
+                loader.remove();
+            }, 800);
+        }, 600);
+    });
+
+    // -------------------------
     // Scroll Animations & Active Nav Link (Intersection Observer)
     // -------------------------
     const sections = document.querySelectorAll('.section, footer');
