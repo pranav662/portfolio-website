@@ -195,27 +195,27 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .logo-icon-img {
-    height: 24px;
+    height: 18px;
     width: auto;
     object-fit: contain;
     animation: loaderPulse 2.5s infinite alternate;
 }
 
 header h1 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 900;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
 }
 
 .loader-icon-img {
-    height: 50px;
+    height: 40px;
     margin-bottom: 0;
     animation: loaderPulse 1.5s infinite alternate;
     filter: drop-shadow(0 0 15px rgba(255, 51, 102, 0.4));
