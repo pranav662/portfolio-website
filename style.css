@@ -199,7 +199,7 @@ header {
 }
 
 .logo-icon-img {
-    height: 22px;
+    height: 38px;
     width: auto;
     object-fit: contain;
     animation: loaderPulse 2.5s infinite alternate;
@@ -215,7 +215,7 @@ header h1 {
 }
 
 .loader-icon-img {
-    height: 40px;
+    height: 75px;
     margin-bottom: 0;
     animation: loaderPulse 1.5s infinite alternate;
     filter: drop-shadow(0 0 15px rgba(255, 51, 102, 0.4));
